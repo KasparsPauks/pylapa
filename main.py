@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template('index.html')
-
+    # {{}} jinja
+# {%%} jinja
 
 @app.route("/about")
 def about():
