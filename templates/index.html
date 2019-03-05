@@ -1,14 +1,126 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <title>Lapas virsraksts</title>
-    <link rel="stylesheet" href="/static/style.css" type="text/css">
-</head>
-<body>
-    <h1>Sveiks apmeklētājs!</h1>
-    <a href="/about"> Go to about</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum maxime obcaecati optio rem veritatis! Aperiam dignissimos distinctio dolore, doloribus ipsa odio quod recusandae sapiente! Adipisci dicta ipsam placeat quae.</p>
-    <img width="300" src="/static/img/zilonis.jpg" alt="Zilonis">
-</body>
-</html>
+{% extends 'base.html' %}
+
+<!--Lapas nosaukums-->
+{% block title %}
+
+Par mums
+
+{% endblock %}
+
+
+
+
+{% block content_title %}
+    <h1 >
+        Sveicināts manā mājas lapā. <span>"vissIrSlikti.lv"</span>
+    </h1>
+
+{% endblock %}
+{% block content_carousel %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12 caroselbackground">
+          <div class="col-md-4 offset-md-4">
+            <div id="carouselexampleindicators" class="carousel slide" data-ride="carousel" >
+              <!-- indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carouselexampleindicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselexampleindicators" data-slide-to="1"></li>
+                <li data-target="#carouselexampleindicators" data-slide-to="2"></li>
+                <li data-target="#carouselexampleindicators" data-slide-to="3"></li>
+                <li data-target="#carouselexampleindicators" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner" >
+                <div class="carousel-item active">
+                  <img class="d-block  img-fluid" src="/static/img/imgJpgCarousel/1.jpg"
+                  alt="first slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/static/img/imgJpgCarousel/2.jpg"
+                  alt="second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/static/img/imgJpgCarousel/4.jpg"
+                  alt="third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/static/img/imgJpgCarousel/5.jpg"
+                  alt="third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/static/img/imgJpgCarousel/6.jpg"
+                  alt="third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselexampleindicators" role="button"
+              data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselexampleindicators" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
+
+
+{% block content_main %}
+<div class="row col-md-8 offset-md-2">
+  <div class="col-md-12 ">
+    <h3 class="titleCenter">Par lapu</h3>
+      <p>
+          Šajā lapā diemžēl Jūs netradīsiet neko jaunu, tā ir tikai un vienīgi mācību vajadzībām.
+          Paldies visiem, kas pret attiecas ar sapratni.
+      </p>
+    <div class=" messageCenter ">
+        <h4 class="titleCenter">Centrs</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloremque sit, enim sint odio corporis
+            illum perferendis,
+            <img src="https://offoxesandhedgehogs.files.wordpress.com/2012/04/anthropology-blog-picture3.gif"
+                 alt="anthropology-blog-picture3.gif">
+            unde repellendus aut dolore doloribus minima qui ullam quisquam possimus magnam ipsa deleniti.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores aut beatae deleniti,
+            dolorum ducimus eos fugit minus molestiae quo sequi, soluta veritatis. Ab amet blanditiis ducimus,
+            hic sed voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            aliquid aspernatur consequuntur deleniti et exercitationem odio velit?
+            Accusantium eaque id iste labore libero non, obcaecati sapiente sit velit veritatis voluptas!
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="row col-md-8 offset-md-2">
+    <div class=" messageRight ">
+        <h3 class="titleCenter">Par dabas mīlestību</h3>
+        <p>Kā jau zināms pasaulē kaut kas periodiski noiet greizi. Tāpēc nav sprotums ko darīt un jau pēc noklusējuma
+            liekas ka viss ir slikti, tāpēc kā devīze dzīvē ir  <b>"vissirslikti.lv".</b>
+            <img  src="/static/img/zilonis.jpg"  alt="zilonis elephanth">  tas tādai līriskai atkāpei. Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. ea ipsum maxime obcaecati optio rem veritatis! aperiam dignissimos distinctio dolore,
+            doloribus ipsa odio quod recusandae sapiente! adipisci dicta ipsam placeat quae.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, at atque, delectus et itaque molestiae
+            mollitia nobis quasi quia unde ut veritatis.
+            At cupiditate et harum in quam recusandae sit.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt doloribus minus porro quo
+            sapiente veritatis voluptas voluptates? Ex illo illum itaque libero molestias nemo, quas repellendus sed totam vel?
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. ea ipsum maxime obcaecati optio rem
+            veritatis! aperiam dignissimos distinctio dolore, doloribus ipsa odio quod recusandae sapiente!
+            adipisci dicta ipsam placeat quae.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block content_footer %}
+
+{% endblock %}

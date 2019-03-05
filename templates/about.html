@@ -1,12 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
-<h3>About</h3>
-    <a href="/"> Go to about</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum ipsam officiis voluptatum. Amet animi deleniti dicta et explicabo impedit ipsum, magnam maiores minima perspiciatis placeat quia reprehenderit similique tenetur!</p>
-</body>
-</html>
+{% extends 'base.html' %}
+<!--Aizliktņa virsraksts-->
+{% block title %}
+    About
+{% endblock %}
+
+<!--Lapas virsraksts-->
+{% block content_title %}
+
+    <h2 class=" titleCenter">About vai savādāk "Par mums"</h2>
+
+{% endblock %}
+
+<!--Pamata saturs lapā-->
+{% block content_main %}
+
+
+<!--Tā kā šajā lapā vairāk nav vajadzība pēc dekorācijām, tad liekam nost
+ karuseļus un sākam nopietnu darbu -->
+<div class="row col-md-8 offset-md-2">
+    <div class="person col-md-4 offset-md-1">
+        <div class="name">
+            <h4>Važonis</h4>
+        </div>
+        <div class="photho">
+            <img src="/static/img/imgPng/none1.png" alt="">
+        </div>
+        <div class="about">
+            <p>
+                Ilgstošs uzņēmuma darbinieks, strādā kā velns.
+                UZņemumu vada kopš dibināšanas 1925.g. Nav pārstājis interesēties par aktualitātem
+                tehnaloģiju sasniegumos, attīstījis pirmo datorklasi savā pagastā.
+            </p>
+        </div>
+        <div class="insert_data">
+            <hr/>
+            <p>
+            Ievietots:<i> 2015.01.01.</i> <br>
+            Aprakstu sagatavoja un ievietoja: <i>Jautrais Personāls.</i>
+            </p>
+        </div>
+    </div>
+    <div class="person col-md-4 offset-md-1">
+        <div class="name">
+            <h4>Kaspars Kalpotājs</h4>
+        <div class="photho">
+            <img src="/static/img/imgPng/none1.png" alt="">
+        </div>
+        <div class="about">
+            <p>
+                Vācbaltiešu izcelsmes Latvijas luterāņu mācītājs. Kalpojis dzimtās mājas draudzē,
+                tur daudz ko apguvis, tagad vēlas Jums palīdzēt nepieciešamības gadījumā.
+                Ilgstošs uzņēmuma darbinieks, strādā kā velns.
+            </p>
+        </div>
+        <div class="insert_data">
+            <hr/>
+            <p>
+            Ievietots:<i> 2015.01.01.</i> <br>
+            Aprakstu sagatavoja un ievietoja: <i>Jautrais Personāls.</i>
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="person col-md-4 offset-md-1">
+        <div class="name">
+            <h4>Laime Skaļā</h4>
+        </div>
+        <div class="photho">
+            <img src="/static/img/imgPng/none2.png" alt="">
+        </div>
+        <div class="about">
+            <p>
+                1989. gadā absolvējusi Jāzepa Vītola Latvijas Mūzikas akadēmijas Vokālās nodaļās bakalaura programmu,
+                bet 2008. gadā - maģistrantūru. Tagad ir Asocēta profesore glezniecībā mūsu uzņēmumā.
+                Ilgstošs uzņēmuma darbinieks, strādā kā velns.
+            </p>
+        </div>
+        <div class="insert_data">
+            <hr/>
+            <p>
+                Ievietots:<i> 2015.01.01.</i> <br>
+                Aprakstu sagatavoja un ievietoja: <i>Jautrais Personāls.</i>
+            </p>
+        </div>
+
+    </div>
+    <div class="person col-md-4 offset-md-1">
+        <div class="name">
+            <h4>Ērģelis</h4>
+        </div>
+        <div class="photho">
+            <img src="/static/img/imgPng/none1.png" alt="">
+        </div>
+        <div class="about">
+            <p>
+                Ilgstošs uzņēmuma darbinieks, strādā kā velns.
+                Latviešu komponists, diriģents, ērģelnieks un mūzikas pedagogs. Strādā pie mums.
+                Apkomponēs jebkuru pasākumu, ja kādam ir interese, tad lūdzu rakstiet uz zemāk no
+                rādīto adresi.
+            </p>
+        </div>
+        <div class="insert_data">
+            <hr/>
+            <p>
+                Ievietots:<i> 2015.01.01.</i> <br>
+                Aprakstu sagatavoja un ievietoja: <i>Jautrais Personāls.</i>
+            </p>
+        </div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum ipsam officiis
+    voluptatum. Amet animi deleniti dicta et explicabo impedit ipsum, magnam maiores minima
+    perspiciatis placeat quia reprehenderit similique tenetur!
+    </p>
+
+<p>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui accumsan sit amet nulla facilisi. Quis auctor elit sed vulputate. Integer eget aliquet nibh praesent tristique magna sit. Ut aliquam purus sit amet luctus venenatis lectus. Pellentesque habitant morbi tristique senectus et netus et. Eu sem integer vitae justo eget. Amet tellus cras adipiscing enim eu turpis egestas. Justo nec ultrices dui sapien eget mi proin sed. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Pretium lectus quam id leo in vitae turpis massa. Sit amet commodo nulla facilisi. Vulputate dignissim suspendisse in est. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Leo integer malesuada nunc vel risus. Mi sit amet mauris commodo quis imperdiet. Nisi scelerisque eu ultrices vitae auctor eu augue ut.
+
+    Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+    Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+    Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+    Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+Adipiscing bibendum est ultricies integer quis auctor. Quis vel eros donec ac odio. Elit eget
+    gravida cum sociis natoque penatibus et. Rutrum quisque non tellus orci. Tortor condimentum
+    lacinia quis vel eros donec ac. Auctor urna nunc id cursus metus. Eget magna fermentum iaculis
+    eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac tortor dignissim convallis
+    aenean. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Adipiscing elit duis tristique
+    sollicitudin nibh sit. Felis imperdiet proin fermentum leo vel orci porta non. Etiam sit amet
+    nisl purus in.
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+<!--Pēdene tiek pielasīta no base.html-->
