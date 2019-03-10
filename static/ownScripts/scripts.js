@@ -5,7 +5,6 @@ function showTime(){
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "24 h formātā";
-
     if(h  < 10){
     	h = "0" + h;
     }
@@ -15,9 +14,14 @@ function showTime(){
     if(s<10){
     	s = "0" + s  ;
     }
-
-
     var time = h + ":" + m + ":" + s + " " + session ;
     document.getElementById("MyClockDisplay").textContent = time;
     setTimeout(showTime, 1000);
  }
+// Iegūt fiksētu laiku un ielikt dokumentā:
+function fixedTime(){
+    var dt = new Date();
+document.getElementById("fixedTime").innerHTML = dt.toLocaleString();
+}
+
+

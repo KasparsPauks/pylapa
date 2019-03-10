@@ -2,6 +2,7 @@
   font-family:  serif;
 }
 *{
+    margin: 0;
 	box-sizing: border-box;
 }
 html,body{
@@ -9,6 +10,9 @@ html,body{
     padding:0;
     height:100%; /* needed for container min-height */
 
+}
+.textRight{
+    text-align : right;
 }
 .row{
 	margin-top: 10px;
