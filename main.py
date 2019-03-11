@@ -15,57 +15,78 @@ Message = namedtuple('Message', 'message_name, message_email, message_text, mess
 messages = []
 
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def index():
-    message_name_cookie = request.cookies.get("message_name_cookie")
     response = make_response(render_template("index.html"))
     return response
 # render_template()
 
-@app.route("/posts")
-def posts():
-    return render_template("posts.html")
+
+# @app.route("/posts")
+# def posts():
+#     return render_template("posts.html")
 
 
-@app.route("/about",  methods=["POST", "GET"])
+@app.route("/about", methods=["GET", "POST"])
 def about():
     return render_template("about.html", messages=messages)
 
 
-@app.route('/getcookie')
-def getcookie():
-    message_name_cookie = request.cookies.get("message_name_cookie")
+# @app.route('/getcookie')
+# def getcookie():
+#     message_name_cookie = request.cookies.get("user_name")
+#
+#     return message_name_cookie
 
-    return message_name_cookie
 
-@app.route("/add_message", methods=["POST", "GET"])
+@app.route("/add_message", methods=["GET", "POST"])
 def add_message():
-    message_name_cookies = request.cookies.get('message_name_cookies')
+    if request.method == "GET":
+        message_k = request.cookies.get("message_k")
+        return render_template("about.html", name=message_k)
+    elif request.method == "POST":
+        message_name = request.form["message_name"]
+        message_ErrorMessage = ''
+        if message_name == '':
+            message_ErrorMessage = 'Jāaizpilda lauki'
+        message_email = request.form["message_email"]
+        if message_email == '':
+            message_ErrorMessage = 'Jāaizpilda lauki'
+        message_text = request.form["message_text"]
+        if message_text == '':
+            message_ErrorMessage = 'Jāaizpilda lauki'
+        message_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        message_time_stamp = int(time.time())
+        messages.append(Message(message_name, message_email, message_text, message_time,
+                                message_time_stamp, message_ErrorMessage))
+        response = make_response(redirect(url_for('about')))
+        response.set_cookie("message_k", message_name, max_age=60*10)
+        return response
 
-    message_name = request.form["message_name"]
-    message_ErrorMessage = ''
-    if message_name == '':
-        message_ErrorMessage = 'Jāaizpilda lauki'
-    message_email = request.form["message_email"]
-    if message_email == '':
-        message_ErrorMessage = 'Jāaizpilda lauki'
-    message_text = request.form["message_text"]
-    if message_text == '':
-        message_ErrorMessage = 'Jāaizpilda lauki'
-    message_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    message_time_stamp = int(time.time())
-    messages.append(Message(message_name, message_email, message_text, message_time,
-                            message_time_stamp, message_ErrorMessage))
-    response = make_response(redirect(url_for('about')))
-    response.set_cookie("message_name_cookie", message_name, max_age=60*10)
 
+@app.route("/posts", methods=['GET', 'POST'])
+def posts():
+    """
+    Skolas mājas darba šablons
+    :return:
+    """
+    if request.method == "GET":
+        user_name = request.cookies.get("user_name")
+        return render_template("posts.html", name=user_name)
+    elif request.method == "POST":
+        contact_name = request.form.get("contact-name")
+        contact_email = request.form.get("contact-email")
+        contact_message = request.form.get("contact-message")
+        user_name = request.cookies.get("user_name")
+        response = make_response(render_template("success.html"))
+        response.set_cookie("user_name", contact_name)
 
-    return response
-
-
+        return response
 
 
 # Va fails tiek izpildīts pa tiešo vai kāda cita faila ...
 if __name__ == "__main__":
-    app.run()  # Palaiž vebservera ...
-    # app.run(debug=True) # Palaiž vebservera ...
+    # app.run()  # Palaiž vebservera ...
+    app.run(debug=True) # Palaiž vebservera ...
+
+

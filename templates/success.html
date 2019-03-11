@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!--Lapas aizliktņa virsraksts-->
+{% block title %}
+Success
+{% endblock  title %}
+<!--Lapas virsraksts-->
+{% block content_title %}
+<h3>Success!</h3>
+<h3>Contact me</h3>
+{% if name %}
+<p>Hello {{ name }}!</p>
+{% endif %}
+<p>Your message was successfully received. Thank you!</p>
+{% endblock content_title %}
+<!--Lapas saturs-->
+{% block content_main %}
+<h1 >
+        Sablons
+</h1>
+{% endblock content_main %}
+<!--Pēdenes daļa-->
+{% block content_footer %}
+
+{% endblock content_footer %}
