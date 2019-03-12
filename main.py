@@ -30,7 +30,7 @@ def index():
 @app.route("/about", methods=["GET", "POST"])
 def about():
     message_k = request.cookies.get("message_k")
-    return render_template("about.html", name=message_k)
+    return render_template("about.html", name=message_k, messages=messages)
     # return render_template("about.html", messages=messages)
 
 
