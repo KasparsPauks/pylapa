@@ -29,7 +29,9 @@ def index():
 
 @app.route("/about", methods=["GET", "POST"])
 def about():
-    return render_template("about.html", messages=messages)
+    message_k = request.cookies.get("message_k")
+    return render_template("about.html", name=message_k)
+    # return render_template("about.html", messages=messages)
 
 
 # @app.route('/getcookie')
