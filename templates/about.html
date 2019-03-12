@@ -21,13 +21,25 @@
 <!--Tā kā šajā lapā vairāk nav vajadzība pēc dekorācijām, tad liekam nost
  karuseļus un sākam nopietnu darbu -->
 <div class="row col-md-8 offset-md-2">
-    {% if message_name_cookie is defined %}
-    <p>
-        Hello {{ print(message_name_cookie) }}!
-    </p>
-    {% else %}
-    variable is not defined
+
+
+
+
+
+    <div class="row col-md-8 offset-md-2">
+{% if name %}
+
+
+        <p>
+            Hello {{ print( name ) }}!
+        </p>
+        {% else %}
+        Variable is not defined
+
+
+
 {% endif %}
+        </div>
     <div class="person col-md-4 offset-md-1">
         <div class="name">
             <h4>Važonis</h4>
@@ -191,22 +203,6 @@
 
 </p>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
