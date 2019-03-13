@@ -19,26 +19,15 @@ messages = []
 def index():
     response = make_response(render_template("index.html"))
     return response
-# render_template()
 
 
-# @app.route("/posts")
-# def posts():
-#     return render_template("posts.html")
+
 
 
 @app.route("/about", methods=["GET", "POST"])
 def about():
     message_k = request.cookies.get("message_k")
     return render_template("about.html", name=message_k, messages=messages)
-    # return render_template("about.html", messages=messages)
-
-
-# @app.route('/getcookie')
-# def getcookie():
-#     message_name_cookie = request.cookies.get("user_name")
-#
-#     return message_name_cookie
 
 
 @app.route("/add_message", methods=["GET", "POST"])
@@ -85,10 +74,14 @@ def posts():
 
         return response
 
+@app.route("/login")
+def login():
+    response = make_response(render_template("login.html"))
+    return response
 
 # Va fails tiek izpildīts pa tiešo vai kāda cita faila ...
 if __name__ == "__main__":
-    # app.run()  # Palaiž vebservera ...
-    app.run(debug=True) # Palaiž vebservera ...
+    app.run()  # Palaiž vebservera ...
+    # app.run(debug=True) # Palaiž vebservera ...
 
 
