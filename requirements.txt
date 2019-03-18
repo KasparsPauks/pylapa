@@ -8,3 +8,5 @@ tinydb==3.12.2
 tinydb-serialization==1.0.4
 Werkzeug==0.14.1
 pymongo==3.7.2
+flask-wtf
+Flask-Session=0.3.1

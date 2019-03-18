@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block navigation %}
+{% endblock navigation %}
+{% block content_main %}
+    <h2>
+        Lapas lietotāju saraksts
+    </h2>
+    <div>
+        {% if userdata %}
+            <h3>Sveiks, {{ userdata.name }}</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lietotājvārds</th>
+      <th scope="col">Vārds</th>
+      <th scope="col">Uzārds</th>
+      <th scope="col">e-pasts</th>
+      <th scope="col">Izveides datums</th>
+      <th scope="col">Izveides datums pēc unix laika</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{ userdata.user_name }}</td>
+      <td>{{ userdata.name }}</td>
+      <td>{{ userdata.surname }}</td>
+      <td>{{ userdata.email }}</td>
+      <td>{{ userdata.date_created }}</td>
+      <td>{{ userdata.date_created_by_unix }}</td>
+      <td>{{ userdata.user_rights }}</td>
+    </tr>
+
+    {% for users in totalList %}
+
+        <tr>
+            <td>{{ users.user_name }}</td>
+            <td>{{ users.name }}</td>
+            <td>{{ users.surname }}</td>
+            <td>{{ users.email }}</td>
+            <td>{{ users.date_created }}</td>
+            <td>{{ users.date_created_by_unix }}</td>
+            <td>{{ users.user_rights }}</td>
+
+        </tr>
+
+    {% endfor %}
+  </tbody>
+
+</table>
+
+
+        {% endif %}
+
+
+    </div>
+{% endblock content_main %}

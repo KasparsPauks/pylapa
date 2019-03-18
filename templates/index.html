@@ -6,7 +6,11 @@
 {% endblock  title %}
 {% block content_title %}
     <h1 >
-        Sveicināts manā mājas lapā. <span>"vissIrSlikti.lv"</span>
+        Sveicināts,
+        <span style="color:red" >{% if loginname %}
+        {{ loginname }}</span>,
+        {% endif %}
+        manā mājas lapā. <span>"vissIrSlikti.lv"</span>
     </h1>
 {% endblock content_title %}
 {% block content_carousel %}
@@ -64,6 +68,7 @@
 </div>
 {% endblock content_carousel%}
 {% block content_main %}
+
 <div class="row col-md-8 offset-md-2">
   <div class="col-md-12 ">
     <h3 class="titleCenter">Par lapu</h3>
@@ -104,6 +109,33 @@
             veritatis! aperiam dignissimos distinctio dolore, doloribus ipsa odio quod recusandae sapiente!
             adipisci dicta ipsam placeat quae.
         </p>
+    </div>
+</div>
+<div class="row col-md-8 offset-md-2">
+    <div class=" messageRight ">
+        <h3 class="titleCenter">Flask</h3>
+        <p>"декораторы, уникальная особенность языка Python. Декоратор изменяет функцию, которая следует за ней"
+                Dekorātori ir pitona valodas īpatnība. Dekorātori maina aiz tās sekojošo funkciju. <br>
+            <hr/>
+            @app.route('/')<br/>
+            @app.route('/index')<br/>
+            def index():<br/>
+                return "Hello, World!"<br/>
+            Šajā gadījumā ir divas funkcijas, kuras izpildīs vienu un to pašu darbību
+            gan "@app.route('/')", gan "@app.route('/index')".
+            <hr/>
+            Operātors render_templates - izsauc šablonizātoru Jinja2, nomainot blokus
+            ar { {....} } operātorus { %  % }.
+        <hr>
+        "Method Not Allowed"  - tas nozīmē, ka funkcija spēj attēlot formu, bet tai nav
+        nekādas loģikas apakšā kā strādāt.
+        <hr>
+        form.validate_on_submit() izpilda visas forrmas validāciju pirms nosūtīšnas
+        šo metodi apraksta funkcijā main.py
+        <hr>
+        flash() - funkcija atrāda kas nav bijis korekti aizpildīts
+        </p>
+
     </div>
 </div>
 {% endblock content_main %}

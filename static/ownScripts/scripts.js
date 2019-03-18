@@ -23,5 +23,11 @@ function fixedTime(){
     var dt = new Date();
 document.getElementById("fixedTime").innerHTML = dt.toLocaleString();
 }
+function palielinat(){
+           var a = 1
+           a=a+1
+//           document.getElementById("palielinat") = a;
+           console.log(a)
 
 
+}
