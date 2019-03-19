@@ -110,7 +110,7 @@ def loginform():
     email = request.form.get("InputEmail_login").lower()
     username = request.form.get("InputUserName_login").lower()
     # if username != '':
-    #     session['username'] = request.form.get("InputUserName_login").lower()
+        session['username'] = request.form.get("InputUserName_login").lower()
     name = request.form.get("InputName_login").title()
     surname = request.form.get("InputSurName_login").title()
     date_created = datetime.datetime.now().strftime("%d.%m.%Y | %H:%M:%S")
