@@ -138,54 +138,7 @@
     perspiciatis placeat quia reprehenderit similique tenetur!
     </p>
 </div>
-<div class="row col-md-8 offset-md-2">
-    <h3 class=" titleCenter  col-md-8" >
-        Astājiet ziņu mums
-    </h3>
-    <div class="form-group col-md-8">
-        <form method="POST" action="/add_message" >
-            <label for="message_name" class="col-md-3 textRight" >Vārds</label>
-            <input class="col-md-3" type="text" name="message_name" id="message_name" placeholder="Jūsu vārds">
-            <br>
-            <label for="message_email" class="col-md-3 textRight">E-pasts</label>
-            <input class="col-md-3" type="email" name="message_email" id="message_email" placeholder="E-pasts">
-            <br>
-            <label for="message_text" class="col-md-3 textRight">Ziņojuma teksts</label>
-            <textarea class="col-md-3" name="message_text" id="message_text" placeholder="Ziņojums"></textarea>
-            <br>
-            <button class="col-md-6 btn btn-success offset-md-1" type="submit" >Iesniegt</button>
 
-        </form>
-    </div>
-
-</div>
-    <!--Ziņu izvadīšanas vieta-->
-<div class="row col-md-8 offset-md-2">
-
-{% for message in messages %}
-    <div class="col-md-8">
-        <h6>Paldies, <b> {{ message.message_name}}</b>, ka tastājāt mums ziņu, mēs ar Jums sazināsimies.</h6>
-        <div class="col-md-12 textJusifity">
-        {{ message.message_text }}
-        </div>
-        <div class="col-md-12" >
-        {{ message.message_email}}
-        </div>
-        <p>Ziņojums iesniegts:</p>
-        <div class="col-md-12" >
-        {{ message.message_time}} &nbsp; Cilvēciskais laika formāts
-        </div>
-        <div class="col-md-12 hidden" >
-        {{ message.message_time_stamp}} &nbsp; Datubāzes formāts/unix laiks
-        </div>
-<p class=" message " id="ErrorMessage">{{
-    message.message_error
-    }}</p>
-    </div>
-{% endfor %} <!--for message in messages-->
-
-
-</div>
 <div class="row col-md-8 offset-md-2">
 <p>
 

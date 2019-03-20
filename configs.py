@@ -6,6 +6,6 @@ class Config(object):
                  'you-will-never-guess'
 
 
-# # Check Configuration section for more details
-# SESSION_TYPE = 'redis'
+# Check Configuration section for more details
+# SESSION_TYPE = 'mogodb'
 
